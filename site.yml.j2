@@ -6,17 +6,6 @@
   gather_facts: no
 
   tasks:
-  - name: Wait for connection
-    wait_for_connection:
-      sleep: 5
-      connect_timeout: 5
-      timeout: 600
-      delay: 60
-
-  - name: Gather Facts
-    setup:
-
-  # Join Active Directory
   - name: some role
     include_role:
       name: some role
