@@ -13,6 +13,18 @@ Any pre-requisites that may not be covered by Ansible itself or the project shou
 
 A description of the settable variables for this project should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
+---
+| Variable | Type | Required | Defaults | Comments |
+|-|:-:|:-:|-|-|
+|| string | Y | None ||
+|| string | N | None ||
+|| boolean | Y | None ||
+|| boolean | N | None ||
+|| numeric | Y | None ||
+|| numeric | N | None ||
+|| dictionary | Y | None ||
+|| dictionary | N | None ||
+
 Dependencies
 ------------
 
@@ -26,7 +38,7 @@ Including an example of how to use your project (for instance, with variables pa
     - name: Project {{ role_name }}
       hosts: all
       gather_facts: no
-    
+
       tasks:
      - name: some role
         include_role:
