@@ -4,17 +4,14 @@
 - name: Project {{ role_name }}
   hosts: all
   gather_facts: true
+  vars:                           # delete me if not needed
+    some_variable: some_value     # delete me if not needed
 
   tasks:
     - name: some role
       ansible.builtin.include_role:
         name: some role
-        apply:
-          tags:
-            - some tag
-      vars:
+      vars:    # delete me if not needed
         # add variables if needed else delete entire section
-      tags:
-        - always
 
 ...
